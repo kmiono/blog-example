@@ -28,11 +28,8 @@ const PostPreview = ({
       </div>
       <div className="flex-1 ml-4">
         <h3 className="text-xl">
-          <Link
-            as={`/posts/${slug}`}
-            href="/posts/[slug]"
-            className="hover:underline">
-            {title}
+          <Link as={`/posts/${slug}`} href="/posts/[slug]">
+            <a className="hover:underline">{title}</a>
           </Link>
         </h3>
         <div className="flex flex-row">
