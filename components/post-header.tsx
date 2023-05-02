@@ -21,7 +21,9 @@ const PostHeader = ({ title, coverImage, date, author, tags }: Props) => {
       </div>
       <ul className="flex gap-x-2">
         {tags.map((tag) => (
-          <li className="font-bold mb-12">{tag}</li>
+          <li className="font-bold mb-12">
+            <a href={`/tags/${tag}`}>{tag}</a>
+          </li>
         ))}
       </ul>
       <div className="mb-8 md:mb-16 sm:mx-0">
