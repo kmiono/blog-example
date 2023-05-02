@@ -1,9 +1,9 @@
+import { getAllTags, getPostsByTag } from "../../lib/api";
+import Post from "../../interfaces/post";
 import Head from "next/head";
 import Layout from "../../components/layout";
-import Post from "../../interfaces/post";
 import Container from "../../components/container";
 import MoreStories from "../../components/more-stories";
-import { getAllTags, getPostsByTag } from "../../lib/api";
 
 type Props = {
   posts: Post[];
@@ -15,7 +15,7 @@ export default function Index({ posts, tag }: Props) {
     <>
       <Layout>
         <Head>
-          <title>Tag:{tag}</title>
+          <title>Tag: {tag}</title>
         </Head>
         <Container>
           <MoreStories posts={posts} />
